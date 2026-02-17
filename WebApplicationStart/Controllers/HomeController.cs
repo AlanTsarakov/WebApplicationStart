@@ -51,6 +51,26 @@ namespace WebApplicationStart.Controllers
             return n1 + n2;
         }
 
+        public string Task3(int n1, int n2, string operation)
+        {
+            if (operation == "+")
+            {
+                return (n1 + n2).ToString();
+            }
+            else if (operation == "-")
+            {
+                return (n1 - n2).ToString();
+            }
+            else if (operation == "*")
+            {
+                return (n1 * n2).ToString();
+            }
+            else
+            {
+                return "Скорректируйте свой запрос!";
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
