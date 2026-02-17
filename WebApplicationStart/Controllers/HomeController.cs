@@ -46,6 +46,11 @@ namespace WebApplicationStart.Controllers
             }
         }
 
+        public int Task2(int n1, int n2)
+        {
+            return n1 + n2;
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
