@@ -71,6 +71,41 @@ namespace WebApplicationStart.Controllers
             }
         }
 
+        public string Task4(int a, int b, string c)
+        {
+            if (c == "-")
+            {
+                return (a - b).ToString();
+            }
+            else if (c == "%2B")
+            {
+                return (a * b).ToString();
+            }
+            else if (c == "/")
+            {
+                if (b != 0)
+                {
+                    return (a / (double)b).ToString();
+                }
+                else
+                {
+                    return "На ноль делить нельзя!";
+                }
+            }
+            else if (c == "*")
+            {
+                return (a * b).ToString();
+            }
+            else
+            {
+                if (c == null)
+                {
+                    return (a + b).ToString();
+                }
+                return "Скорректируйте запрос!";
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
